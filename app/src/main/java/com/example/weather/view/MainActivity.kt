@@ -75,7 +75,10 @@ class MainActivity : AppCompatActivity() {
 
             //show/Hide Loading progress
             isLoading.observe(this@MainActivity) {
-                if (it) binding.pbLoading.visibility = View.VISIBLE
+                if (it){
+                    binding.noDataFound.visibility = View.GONE
+                    binding.pbLoading.visibility = View.VISIBLE
+                }
                 else binding.pbLoading.visibility = View.GONE
             }
         }
